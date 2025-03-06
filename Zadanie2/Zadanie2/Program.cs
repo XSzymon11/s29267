@@ -21,13 +21,13 @@ public class Exercise1
             throw new ArgumentException("Tablica nie może być pusta ani null.");
         }
 
-        double suma = 0;
+        double sooma = 0;
         for (int i = 0; i < tablica.Length; i++)
         {
-            suma += tablica[i];
+            sooma += tablica[i];
         }
 
-        return suma / tablica.Length;
+        return sooma / tablica.Length;
     }
 
     //zgodnie z zadaniem "statyczną metodę, która przyjmuje tablicę int'ów i zwraca maksymalną wartość"
