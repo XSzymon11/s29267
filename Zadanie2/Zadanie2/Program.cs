@@ -2,8 +2,10 @@
 Console.WriteLine("Hello, World!");
 Console.WriteLine("Hejjj!");
 
-public class Exercise1 {
-    public static void Main() {
+public class Exercise1
+{
+    public static void Main()
+    {
         //deklaracja tablicy
         int[] liczby = { 1, 2, 3, 4, 5 };
 
@@ -12,6 +14,7 @@ public class Exercise1 {
         Console.WriteLine($"Średnia wynosi: {srednia}");
     }
 
+
     //zgodnie z zadaniem "statyczna metoda, która przyjmuje tablicę int'ów i zwraca wyliczoną średnią
     public static double ObliczSrednia(int[] tabyca) {
         if (tabyca == null || tabyca.Length == 0) {
@@ -19,10 +22,31 @@ public class Exercise1 {
         }
 
         double suma = 0;
+
         for (int i = 0; i < tabyca.Length; i++) {
             suma += tabyca[i];
         }
 
         return suma / tabyca.Length;
+    }
+
+    //zgodnie z zadaniem "statyczną metodę, która przyjmuje tablicę int'ów i zwraca maksymalną wartość"
+    public static double ZwrocMaxa(int[] tablica) {
+        if (tablica == null || tablica.Length == 0)
+        {
+            throw new ArgumentException("Tablica nie może być pusta ani null.");
+        }
+
+        int max = tablica[0];
+
+        for (int i = 1; i < tablica.Length; i++)
+        {
+            if (tablica[i] > max)
+            {
+                max = tablica[i];
+            }
+        }
+
+        return max;
     }
 }
