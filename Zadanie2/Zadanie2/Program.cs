@@ -13,16 +13,16 @@ public class Exercise1 {
     }
 
     //zgodnie z zadaniem "statyczna metoda, która przyjmuje tablicę int'ów i zwraca wyliczoną średnią
-    public static double ObliczSrednia(int[] tablica) {
-        if (tablica == null || tablica.Length == 0) {
+    public static double ObliczSrednia(int[] tabyca) {
+        if (tabyca == null || tabyca.Length == 0) {
             throw new ArgumentException("Tablica nie może być pusta ani null.");
         }
 
         double suma = 0;
-        for (int i = 0; i < tablica.Length; i++) {
-            suma += tablica[i];
+        for (int i = 0; i < tabyca.Length; i++) {
+            suma += tabyca[i];
         }
 
-        return suma / tablica.Length;
+        return suma / tabyca.Length;
     }
 }
